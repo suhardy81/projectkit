@@ -1,3 +1,12 @@
-basic.forever(function () {
-    basic.showString("Hello!")
+input.onButtonPressed(Button.A, function () {
+    music.play(music.tonePlayable(262, music.beat(BeatFraction.Double)), music.PlaybackMode.UntilDone)
+    rekabitRgbStick.showColor(0x00ff00)
+    rekabit.setServoPosition(ServoChannel.S1, 20)
+    basic.showString("\"WELCOME\"")
+    basic.pause(5000)
+    rekabitRgbStick.showColor(0xff0000)
+    rekabit.setServoPosition(ServoChannel.S1, 90)
 })
+rekabitRgbStick.create(RekabitPortYellowPin.P0)
+rekabitRgbStick.showColor(0xff0000)
+rekabit.setServoPosition(ServoChannel.S1, 90)
